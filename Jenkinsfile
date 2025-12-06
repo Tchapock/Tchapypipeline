@@ -4,7 +4,7 @@ pipeline {
        
         stage('CodeScan'){
             steps{
-                sh 'sh 'trivy fs . -f template --template "@contrib/html.tpl" -o result.html'
+                sh 'sh 'trivy fs . -o result.html'
 '
                 sh 'cat result.html'
                 
