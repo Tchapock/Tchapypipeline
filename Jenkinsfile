@@ -1,15 +1,16 @@
 pipeline {
     agent any
     stages{
-      /*  
+       
         stage('CodeScan'){
             steps{
-                sh 'trivy fs .  - o result.html'
-                sh 'cat result.'
+                sh 'sh 'trivy fs . -f template --template "@contrib/html.tpl" -o result.html'
+'
+                sh 'cat result.html'
                 
             }
         }
-        */
+
         stage('dockerLogin'){
             steps{
                 sh 'aws ecr get-login-password --region us-east-2 | \
