@@ -20,7 +20,7 @@ pipeline {
         stage('dockerIamgeBuild'){
             steps{
                 sh 'docker build -t jenkins-ci .'
-                sh 'docker build -t imageversion . '
+                sh 'docker build -t imageversion .'
             }
         }
         stage('dockerImageTag'){
