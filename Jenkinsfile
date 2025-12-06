@@ -4,8 +4,7 @@ pipeline {
        
         stage('CodeScan'){
             steps{
-                sh 'sh 'trivy fs . -o result.html'
-'
+                sh 'trivy fs . -o result.html'
                 sh 'cat result.html'
                 
             }
